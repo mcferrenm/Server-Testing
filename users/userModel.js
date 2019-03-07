@@ -14,5 +14,8 @@ module.exports = {
     return db("users")
       .where({ id })
       .first();
+  },
+  delete: async function(id) {
+    return db("users").where({ id }).del();
   }
 };

@@ -16,4 +16,8 @@ router.post("/", async (req, res) => {
   res.status(200).send("hi");
 });
 
+router.delete("/:id", async (req, res) => {
+  res.status(204).send("hi");
+});
+
 module.exports = router;
