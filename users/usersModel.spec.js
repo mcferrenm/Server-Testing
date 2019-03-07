@@ -12,4 +12,17 @@ describe("users model", () => {
       expect(users).toBeDefined();
     });
   });
+  describe("insert()", () => {
+    beforeEach(async () => {
+      await db("users").truncate();
+    });
+
+    it("should insert user into the db", async () => {
+      const user = await Users.insert({
+        username: "Doug",
+        password: "pass"
+      });
+      expect(user.username).toEqual("Doug");
+    });
+  });
 });
