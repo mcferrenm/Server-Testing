@@ -14,6 +14,18 @@ describe("server.js", () => {
 
         expect(res.status).toBe(200);
       });
+
+      it("should return json", async () => {
+        const res = await request(server).get("/api/users");
+
+        expect(res.type).toBe("application/json");
+      });
+
+      it("should return json", async () => {
+        const res = await request(server).get("/api/users");
+
+        expect(res.type).toBe("application/json");
+      });
     });
   });
 });
