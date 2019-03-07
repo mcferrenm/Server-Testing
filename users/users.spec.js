@@ -16,10 +16,10 @@ describe("/api/users", () => {
       expect(res.type).toBe("application/json");
     });
 
-    it("should return {api: 'hello'}", async () => {
+    it("should return an array", async () => {
       const res = await request(server).get("/api/users");
 
-      expect(res.body).toEqual({ api: "hello" });
+      expect(res.body).toBeInstanceOf(Array)
     });
   });
 });
