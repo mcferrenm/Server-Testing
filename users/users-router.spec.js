@@ -22,4 +22,14 @@ describe("/api/users", () => {
       expect(res.body).toBeInstanceOf(Array);
     });
   });
+  describe("POST /", () => {
+    it("should return 200 status code", async () => {
+      const res = await request(server).post("/api/users", {
+        username: "Doug",
+        password: "pass"
+      });
+
+      expect(res.status).toBe(200);
+    });
+  });
 });
