@@ -19,7 +19,7 @@ describe("/api/users", () => {
     it("should return an array", async () => {
       const res = await request(server).get("/api/users");
 
-      expect(res.body).toBeInstanceOf(Array)
+      expect(res.body).toBeInstanceOf(Array);
     });
   });
 });

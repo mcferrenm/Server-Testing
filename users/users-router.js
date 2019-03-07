@@ -7,4 +7,8 @@ router.get("/", async (req, res) => {
   res.status(200).json(users);
 });
 
+router.post('/', async (req, res) => {
+  res.status(200)
+});
+
 module.exports = router;
